@@ -1,0 +1,14 @@
+{
+  "id": "TextboxHeading",
+  "name": "TextboxHeading",
+  "version": "0.0.0",
+  "allowTelemetry": true,
+  "extensions": [
+    {
+      "name": "TextboxHeading",
+      "alias": "TextboxHeading.Bundle",
+      "type": "bundle",
+      "js": "/App_Plugins/TextboxHeading/umbraco-community-textbox-heading.js"
+    }
+  ]
+}
