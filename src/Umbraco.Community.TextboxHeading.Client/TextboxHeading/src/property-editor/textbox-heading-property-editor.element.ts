@@ -11,14 +11,18 @@ import {
 } from "@umbraco-cms/backoffice/property-editor";
 
 type PropertyEditorValueType = {
-  street?: string;
-  houseNumber?: string;
-  addressLine2?: string;
-  city?: string;
-  state?: string;
-  postalCode?: string;
-  country?: string;
+  text?: string;
+  size?: string;
 };
+
+const SizeOptions = [
+  { value: "H1", name: "H1" },
+  { value: "H2", name: "H2" },
+  { value: "H3", name: "H3" },
+  { value: "H4", name: "H4" },
+  { value: "H5", name: "H5" },
+  { value: "H6", name: "H6" },
+];
 
 @customElement("textbox-heading-property-editor")
 export class textboxHeadingPropertyEditorElement
@@ -33,8 +37,28 @@ export class textboxHeadingPropertyEditorElement
 
   render() {
     return html`
-      <div>
-        <h1>Test</h1>
+      <div style="display: flex; width: 100%;">
+        <div style="flex: 0 0 80%;">
+          <uui-input
+            id="text"
+            value=${this.value?.text ?? ""}
+            style="width: 100%;">
+          </uui-input>
+        </div>
+        <div style="flex: 0 0 20%; margin-left: 2px;">
+          <uui-select
+            label="Select size"
+            placeholder="Select size..."
+            value=${this.value?.size ?? ""}
+            style="width: 100%;"
+            .options=${
+              SizeOptions.map((e) => ({
+                ...e,
+                selected: e.value == this.value?.size,
+              }))
+            }>
+           </uui-select>
+        </div>
       </div>
     `;
   }
