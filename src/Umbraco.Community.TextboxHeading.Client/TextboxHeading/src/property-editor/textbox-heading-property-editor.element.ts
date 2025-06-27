@@ -9,6 +9,12 @@ import {
   ManifestPropertyEditorUi,
   UmbPropertyEditorUiElement,
 } from "@umbraco-cms/backoffice/property-editor";
+import {
+  UUIInputEvent,
+} from "@umbraco-cms/backoffice/external/uui";
+import { UmbChangeEvent } from "@umbraco-cms/backoffice/event";
+
+
 
 type PropertyEditorValueType = {
   text?: string;
@@ -35,6 +41,13 @@ export class textboxHeadingPropertyEditorElement
   @property({ type: Object, attribute: false })
   value?: PropertyEditorValueType;
 
+  #setValueProperty(property: keyof PropertyEditorValueType, value: string) {
+    const newValue = { ...this.value }; 
+    newValue[property] = value;
+    this.value = newValue;
+    this.dispatchEvent(new UmbChangeEvent());
+  }
+
   render() {
     return html`
       <div style="display: flex; width: 100%;">
@@ -42,7 +55,9 @@ export class textboxHeadingPropertyEditorElement
           <uui-input
             id="text"
             value=${this.value?.text ?? ""}
-            style="width: 100%;">
+            style="width: 100%;"
+            @input=${(e: UUIInputEvent) =>
+              this.#setValueProperty("text", e.target.value as string)}>
           </uui-input>
         </div>
         <div style="flex: 0 0 20%; margin-left: 2px;">
