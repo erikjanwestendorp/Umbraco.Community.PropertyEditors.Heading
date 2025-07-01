@@ -1,18 +1,68 @@
-const o = {
-  name: "Textbox Heading Property Editor UI",
-  alias: "TextboxHeading.propertyEditorUI",
-  type: "propertyEditorUi",
-  element: () => import("./textbox-heading-property-editor.element-Dirr5Wh5.js"),
+const e = {
+  type: "propertyEditorSchema",
+  name: "Heading",
+  alias: "Umbraco.Community.Heading",
   meta: {
-    propertyEditorSchemaAlias: "Umbraco.Plain.Json",
-    label: "Textbox Heading",
-    icon: "icon-pin-location",
-    group: "common"
+    defaultPropertyEditorUiAlias: "TextboxHeading.propertyEditorUI",
+    //TODO Reaname
+    settings: {
+      properties: [
+        {
+          alias: "umbracoDataValueType",
+          label: "Headings",
+          description: "Select the allowed headings",
+          propertyEditorUiAlias: "Umb.Community.PropertyEditorUi.HeadingType"
+          //propertyEditorUiAlias : 'Umb.PropertyEditorUi.TextBox'
+        }
+      ]
+    }
   }
 }, t = [
-  o
+  {
+    type: "propertyEditorUi",
+    alias: "TextboxHeading.propertyEditorUI",
+    //TODO Reaname
+    name: "Heading Property Editor UI",
+    element: () => import("./heading-property-editor.element-BfUmygu8.js"),
+    //TODO Rename file to somthing with UI
+    meta: {
+      label: "Heading",
+      icon: "icon-heading-1",
+      group: "community",
+      propertyEditorSchemaAlias: "Umbraco.Community.Heading",
+      //TODO Change
+      //propertyEditorSchemaAlias: 'Umbraco.Plain.Json',
+      supportsReadOnly: !0
+      // settings:{
+      // 	properties: [
+      // 		{
+      // 			alias: "disabled",
+      // 			label: "Disabled",
+      // 			description: "Disables the suggestion button",
+      // 			propertyEditorUiAlias: "Umb.Community.PropertyEditorUi.HeadingType"
+      // 		}
+      // 	]
+      // }
+    }
+  },
+  e
+], i = {
+  type: "propertyEditorUi",
+  alias: "Umb.Community.PropertyEditorUi.HeadingType",
+  //TODO FIX Naming
+  name: "Heading Type Property Editor UI",
+  element: () => import("./property-editor-ui-heading-type.element-dktL4yVd.js"),
+  meta: {
+    label: "Heading Type",
+    icon: "icon-heading-2",
+    group: "Community"
+  }
+}, o = [
+  // textboxHeadingEditorManifest,
+  ...t,
+  i
 ];
 export {
-  t as manifests
+  o as manifests
 };
 //# sourceMappingURL=umbraco-community-textbox-heading.js.map
