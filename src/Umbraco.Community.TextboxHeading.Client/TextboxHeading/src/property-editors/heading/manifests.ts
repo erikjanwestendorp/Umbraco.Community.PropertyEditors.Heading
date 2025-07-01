@@ -11,18 +11,7 @@ export const manifests: Array<UmbExtensionManifest> = [
 			icon: 'icon-heading-1',
 			group: 'community',
 			propertyEditorSchemaAlias: 'Umbraco.Community.Heading', //TODO Change
-			//propertyEditorSchemaAlias: 'Umbraco.Plain.Json',
 			supportsReadOnly: true,
-			// settings:{
-			// 	properties: [
-			// 		{
-			// 			alias: "disabled",
-			// 			label: "Disabled",
-			// 			description: "Disables the suggestion button",
-			// 			propertyEditorUiAlias: "Umb.Community.PropertyEditorUi.HeadingType"
-			// 		}
-            // 	]
-			// }
 		},
 	},
 	headingSchemaManifest,

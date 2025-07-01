@@ -27,9 +27,13 @@ export class PropertyEditorUIHeadingTypeElement extends UmbLitElement implements
 	override render() {
 		console.log('Hello from render');
 		console.log(this._options);
-		return html`
-        	<umb-input-checkbox-list
-				.list=${this._options}></umb-input-checkbox-list>
+		return html`		
+			<uui-checkbox label="Heading 1" value="H1"></uui-checkbox>
+			<uui-checkbox label="Heading 2" value="H2"></uui-checkbox>
+			<uui-checkbox label="Heading 3" value="H3"></uui-checkbox>
+			<uui-checkbox label="Heading 4" value="H4"></uui-checkbox>
+			<uui-checkbox label="Heading 5" value="H5"></uui-checkbox>
+			<uui-checkbox label="Heading 6" value="H6"></uui-checkbox>
         `;
 	}
 }

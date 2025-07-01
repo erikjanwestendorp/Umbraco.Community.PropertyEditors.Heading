@@ -13,7 +13,6 @@ export const manifest: ManifestPropertyEditorSchema = {
 					label: 'Headings',
 					description: 'Select the allowed headings',
 					propertyEditorUiAlias: 'Umb.Community.PropertyEditorUi.HeadingType',
-					//propertyEditorUiAlias : 'Umb.PropertyEditorUi.TextBox'
 				},
 			],
 		},
