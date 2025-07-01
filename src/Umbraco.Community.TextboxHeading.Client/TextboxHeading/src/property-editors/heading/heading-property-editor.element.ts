@@ -30,8 +30,8 @@ const SizeOptions = [
   { value: "H6", name: "H6" },
 ];
 
-@customElement("textbox-heading-property-editor")
-export class textboxHeadingPropertyEditorElement
+@customElement("heading-property-editor")
+export class headingPropertyEditorElement
   extends UmbElementMixin(LitElement)
   implements UmbPropertyEditorUiElement
 {
@@ -79,10 +79,10 @@ export class textboxHeadingPropertyEditorElement
   }
 }
 
-export default textboxHeadingPropertyEditorElement;
+export default headingPropertyEditorElement;
 
 declare global {
   interface HTMLElementTagNameMap {
-    "textbox-heading-property-editor": textboxHeadingPropertyEditorElement;
+    "textbox-heading-property-editor": headingPropertyEditorElement;
   }
 }
