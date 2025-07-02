@@ -8,22 +8,21 @@ const e = {
     settings: {
       properties: [
         {
-          alias: "umbracoDataValueType",
+          alias: "allowedHeadings",
           label: "Headings",
           description: "Select the allowed headings",
           propertyEditorUiAlias: "Umb.Community.PropertyEditorUi.HeadingType"
-          //propertyEditorUiAlias : 'Umb.PropertyEditorUi.TextBox'
         }
       ]
     }
   }
-}, t = [
+}, i = [
   {
     type: "propertyEditorUi",
     alias: "TextboxHeading.propertyEditorUI",
     //TODO Reaname
     name: "Heading Property Editor UI",
-    element: () => import("./heading-property-editor.element-BfUmygu8.js"),
+    element: () => import("./heading-property-editor.element-BxDS2fDi.js"),
     //TODO Rename file to somthing with UI
     meta: {
       label: "Heading",
@@ -31,36 +30,24 @@ const e = {
       group: "community",
       propertyEditorSchemaAlias: "Umbraco.Community.Heading",
       //TODO Change
-      //propertyEditorSchemaAlias: 'Umbraco.Plain.Json',
       supportsReadOnly: !0
-      // settings:{
-      // 	properties: [
-      // 		{
-      // 			alias: "disabled",
-      // 			label: "Disabled",
-      // 			description: "Disables the suggestion button",
-      // 			propertyEditorUiAlias: "Umb.Community.PropertyEditorUi.HeadingType"
-      // 		}
-      // 	]
-      // }
     }
   },
   e
-], i = {
+], t = {
   type: "propertyEditorUi",
   alias: "Umb.Community.PropertyEditorUi.HeadingType",
   //TODO FIX Naming
   name: "Heading Type Property Editor UI",
-  element: () => import("./property-editor-ui-heading-type.element-dktL4yVd.js"),
+  element: () => import("./property-editor-ui-heading-type.element-D4jc_RsP.js"),
   meta: {
     label: "Heading Type",
     icon: "icon-heading-2",
     group: "Community"
   }
 }, o = [
-  // textboxHeadingEditorManifest,
-  ...t,
-  i
+  ...i,
+  t
 ];
 export {
   o as manifests

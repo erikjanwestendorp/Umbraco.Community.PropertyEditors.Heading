@@ -13,8 +13,7 @@ import {
   UUIInputEvent,
 } from "@umbraco-cms/backoffice/external/uui";
 import { UmbChangeEvent } from "@umbraco-cms/backoffice/event";
-
-
+import { type UmbPropertyEditorConfigCollection } from '@umbraco-cms/backoffice/property-editor';
 
 type PropertyEditorValueType = {
   text?: string;
@@ -41,6 +40,8 @@ export class headingPropertyEditorElement
   @property({ type: Object, attribute: false })
   value?: PropertyEditorValueType;
 
+  
+
   #setValueProperty(property: keyof PropertyEditorValueType, value: string) {
     const newValue = { ...this.value }; 
     newValue[property] = value;
@@ -48,7 +49,19 @@ export class headingPropertyEditorElement
     this.dispatchEvent(new UmbChangeEvent());
   }
 
+  @property({ attribute: false })
+  public set config(config: UmbPropertyEditorConfigCollection) {
+    console.log("Config set:", config);
+    var allowedHeadings = config.getValueByAlias("allowedHeadings");
+
+    console.log("Allowed headings:", allowedHeadings);
+    // this._disabled = config.getValueByAlias("disabled");
+    // this._placeholder = config.getValueByAlias("placeholder");
+    // this._maxChars = config.getValueByAlias("maxChars");
+  }
+
   render() {
+    // console.log(config);
     return html`
       <div style="display: flex; width: 100%;">
         <div style="flex: 0 0 80%;">

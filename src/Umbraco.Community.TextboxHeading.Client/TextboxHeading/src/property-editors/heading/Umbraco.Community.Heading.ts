@@ -9,7 +9,7 @@ export const manifest: ManifestPropertyEditorSchema = {
 		settings: {
 			properties: [
 				{
-					alias: 'umbracoDataValueType',
+					alias: 'allowedHeadings',
 					label: 'Headings',
 					description: 'Select the allowed headings',
 					propertyEditorUiAlias: 'Umb.Community.PropertyEditorUi.HeadingType',
