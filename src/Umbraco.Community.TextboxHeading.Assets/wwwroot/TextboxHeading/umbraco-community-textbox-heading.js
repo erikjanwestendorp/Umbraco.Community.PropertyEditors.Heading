@@ -39,7 +39,7 @@ const e = {
   alias: "Umb.Community.PropertyEditorUi.HeadingType",
   //TODO FIX Naming
   name: "Heading Type Property Editor UI",
-  element: () => import("./property-editor-ui-heading-type.element-D4jc_RsP.js"),
+  element: () => import("./property-editor-ui-heading-type.element-CkP087Ri.js"),
   meta: {
     label: "Heading Type",
     icon: "icon-heading-2",

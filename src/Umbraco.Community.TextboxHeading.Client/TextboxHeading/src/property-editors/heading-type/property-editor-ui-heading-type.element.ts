@@ -1,13 +1,13 @@
-import { html, customElement, property, state, query } from '@umbraco-cms/backoffice/external/lit';
+import { html, customElement, property, state, query} from '@umbraco-cms/backoffice/external/lit';
 import type {UUISelectElement, UUISelectEvent } from '@umbraco-cms/backoffice/external/uui';
-
 import {
 	type UmbPropertyEditorUiElement,
 	UmbPropertyValueChangeEvent,
-	type UmbPropertyEditorConfigCollection,
 } from '@umbraco-cms/backoffice/property-editor';
 import { UmbLitElement } from '@umbraco-cms/backoffice/lit-element';
 
+
+type UmbCheckboxListItem = { label: string; value: string; checked: boolean };
 /**
  * @element umb-property-editor-ui-heading-type 
  */
@@ -15,22 +15,20 @@ import { UmbLitElement } from '@umbraco-cms/backoffice/lit-element';
 //TODO Copy from property-editor-ui-value-type.element.ts
 @customElement('umb-property-editor-ui-heading-type')
 export class PropertyEditorUIHeadingTypeElement extends UmbLitElement implements UmbPropertyEditorUiElement {
-	private _value: string | undefined = undefined;
-	@property()
-	public get value(): string | undefined {
-		return this._value;
-	}
-	public set value(value: string | undefined) {
-		this._value = value;
+	@state()
+    private _selection: Array<string> = [];
 
-		const selected = this._options.filter((option) => {
-			if (this.selectEl && option.value === this.value) this.selectEl.value = this.value;
-			return (option.selected = option.value === this.value);
-		});
-		if (selected.length === 0) {
-			this._options[0].selected = true;
-		}
+	@property({ type: Array })
+	public set value(value: Array<string> | string | undefined) {
+		this._selection = Array.isArray(value) ? value : value ? [value] : [];
 	}
+	public get value(): Array<string> | undefined {
+		return this._selection;
+	}
+
+	@property({ type: Boolean, reflect: true })
+	readonly = false;
+
 
 	@query('uui-select')
 	selectEl?: UUISelectElement;
@@ -45,19 +43,40 @@ export class PropertyEditorUIHeadingTypeElement extends UmbLitElement implements
 		{ name: 'Heading 6', value: 'H6' },
 	];
 
-	@property({ attribute: false })
-	public config?: UmbPropertyEditorConfigCollection;
+	private get _list(): Array<UmbCheckboxListItem> {
+		return this._options.map((opt) => ({
+			label: opt.name,
+			value: opt.value,
+			checked: this._selection.includes(opt.value),
+		}));
+	}
 
 	#onChange(e: UUISelectEvent) {
-		this.value = e.target.value as string;
+		let raw = e.target.value;
+
+		let values: string[] = [];
+
+		if (typeof raw === 'string') {
+			values = raw.split(',').map(v => v.trim());
+		} else if (Array.isArray(raw)) {
+			values = raw.filter((v): v is string => typeof v === 'string');
+		} else if (raw != null) {
+			values = [String(raw)];
+		}
+
+		this.value = values;
+
 		this.dispatchEvent(new UmbPropertyValueChangeEvent());
 	}
 
 	override render() {
-		return html`<uui-select
-			label="Select a value type"
-			.options="${this._options}"
-			@change="${this.#onChange}"></uui-select>`;
+		return html`
+			<umb-input-checkbox-list
+				.list=${this._list}
+				.selection=${this._selection}
+				?readonly=${this.readonly}
+				@change=${this.#onChange}></umb-input-checkbox-list>
+		`;
 	}
 }
 
