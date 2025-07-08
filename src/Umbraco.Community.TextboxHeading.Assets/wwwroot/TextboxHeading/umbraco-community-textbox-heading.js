@@ -22,7 +22,7 @@ const e = {
     alias: "TextboxHeading.propertyEditorUI",
     //TODO Reaname
     name: "Heading Property Editor UI",
-    element: () => import("./heading-property-editor.element-BxDS2fDi.js"),
+    element: () => import("./heading-property-editor.element-a9Fdd01w.js"),
     //TODO Rename file to somthing with UI
     meta: {
       label: "Heading",
@@ -39,7 +39,7 @@ const e = {
   alias: "Umb.Community.PropertyEditorUi.HeadingType",
   //TODO FIX Naming
   name: "Heading Type Property Editor UI",
-  element: () => import("./property-editor-ui-heading-type.element-CkP087Ri.js"),
+  element: () => import("./property-editor-ui-heading-type.element-BdTl6R2Q.js"),
   meta: {
     label: "Heading Type",
     icon: "icon-heading-2",
