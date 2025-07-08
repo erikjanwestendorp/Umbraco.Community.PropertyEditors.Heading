@@ -20,27 +20,18 @@ type PropertyEditorValueType = {
   size?: string;
 };
 
-const SizeOptions = [
-  { value: "H1", name: "H1" },
-  { value: "H2", name: "H2" },
-  { value: "H3", name: "H3" },
-  { value: "H4", name: "H4" },
-  { value: "H5", name: "H5" },
-  { value: "H6", name: "H6" },
-];
-
 @customElement("heading-property-editor")
 export class headingPropertyEditorElement
   extends UmbElementMixin(LitElement)
   implements UmbPropertyEditorUiElement
 {
+  private _sizeOptions: Array<{ value: string; name: string }> = [];
+
   @property({ type: Object, attribute: false })
   manifest?: ManifestPropertyEditorUi;
 
   @property({ type: Object, attribute: false })
-  value?: PropertyEditorValueType;
-
-  
+  value?: PropertyEditorValueType;  
 
   #setValueProperty(property: keyof PropertyEditorValueType, value: string) {
     const newValue = { ...this.value }; 
@@ -51,17 +42,21 @@ export class headingPropertyEditorElement
 
   @property({ attribute: false })
   public set config(config: UmbPropertyEditorConfigCollection) {
-    console.log("Config set:", config);
-    var allowedHeadings = config.getValueByAlias("allowedHeadings");
+    const allowedHeadings = config.getValueByAlias("allowedHeadings");
 
-    console.log("Allowed headings:", allowedHeadings);
-    // this._disabled = config.getValueByAlias("disabled");
-    // this._placeholder = config.getValueByAlias("placeholder");
-    // this._maxChars = config.getValueByAlias("maxChars");
+      if (Array.isArray(allowedHeadings)) {
+        this._sizeOptions = allowedHeadings.map((heading: string) => ({
+          value: heading,
+          name: heading
+        }));
+      } else {
+        this._sizeOptions = []; 
+      }
+
+      this.requestUpdate(); 
   }
 
   render() {
-    // console.log(config);
     return html`
       <div style="display: flex; width: 100%;">
         <div style="flex: 0 0 80%;">
@@ -80,7 +75,7 @@ export class headingPropertyEditorElement
             value=${this.value?.size ?? ""}
             style="width: 100%;"
             .options=${
-              SizeOptions.map((e) => ({
+              this._sizeOptions.map((e) => ({
                 ...e,
                 selected: e.value == this.value?.size,
               }))
