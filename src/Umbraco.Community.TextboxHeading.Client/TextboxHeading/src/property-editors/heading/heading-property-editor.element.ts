@@ -79,7 +79,11 @@ export class headingPropertyEditorElement
                 ...e,
                 selected: e.value == this.value?.size,
               }))
-            }>
+            }
+            @change=${(e: Event) => {
+              const target = e.target as HTMLSelectElement;
+              this.#setValueProperty("size", target.value);
+            }}>
            </uui-select>
         </div>
       </div>

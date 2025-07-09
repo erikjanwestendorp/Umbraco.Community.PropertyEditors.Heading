@@ -22,7 +22,7 @@ const e = {
     alias: "TextboxHeading.propertyEditorUI",
     //TODO Reaname
     name: "Heading Property Editor UI",
-    element: () => import("./heading-property-editor.element-a9Fdd01w.js"),
+    element: () => import("./heading-property-editor.element-CoNEBS3t.js"),
     //TODO Rename file to somthing with UI
     meta: {
       label: "Heading",
