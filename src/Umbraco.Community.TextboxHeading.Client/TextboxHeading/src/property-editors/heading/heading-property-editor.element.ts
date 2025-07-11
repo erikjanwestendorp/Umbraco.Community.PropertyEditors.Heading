@@ -59,11 +59,8 @@ export class headingPropertyEditorElement
   render() {
     return html`
       <div style="display: flex; width: 100%;">
-        <!-- Fixed width select, flexible input -->
         <div style="width: 60px; margin-right: 2px;">
           <uui-select
-            label="Select size"
-            placeholder="Select size..."
             value=${this.value?.size ?? ""}
             style="width: 100%;"
             .options=${
