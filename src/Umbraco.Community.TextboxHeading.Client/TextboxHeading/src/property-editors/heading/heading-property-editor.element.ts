@@ -59,8 +59,8 @@ export class headingPropertyEditorElement
   render() {
     return html`
       <div style="display: flex; width: 100%;">
-        <!-- Switched order: Select first, then Input -->
-        <div style="flex: 0 0 10%; margin-right: 2px;">
+        <!-- Fixed width select, flexible input -->
+        <div style="width: 60px; margin-right: 2px;">
           <uui-select
             label="Select size"
             placeholder="Select size..."
@@ -78,7 +78,7 @@ export class headingPropertyEditorElement
             }}>
           </uui-select>
         </div>
-        <div style="flex: 0 0 90%;">
+        <div style="flex: 1;">
           <uui-input
             id="text"
             value=${this.value?.text ?? ""}
