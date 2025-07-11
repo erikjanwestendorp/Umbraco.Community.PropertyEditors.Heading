@@ -7,6 +7,9 @@ namespace Umbraco.Community.TextboxHeading.TagHelpers;
 public class HeadingTagHelper : TagHelper
 {
     public Heading? Heading { get; set; }
+    public string? Id { get; set; }
+    public string? Class { get; set; }
+    public string? AriaLabel { get; set; }
 
     public override void Process(TagHelperContext context, TagHelperOutput output)
     {
@@ -19,5 +22,21 @@ public class HeadingTagHelper : TagHelper
         output.TagName = tagName;
         output.TagMode = TagMode.StartTagAndEndTag;
         output.Content.SetContent(Heading.Text);
+
+    
+        if (!string.IsNullOrWhiteSpace(Class))
+        {
+            output.Attributes.SetAttribute("class", Class);
+        }
+        
+        if (!string.IsNullOrWhiteSpace(Id))
+        {
+            output.Attributes.SetAttribute("id", Id);
+        }
+
+        if (!string.IsNullOrWhiteSpace(AriaLabel))
+        {
+            output.Attributes.SetAttribute("aria-label", AriaLabel);
+        }
     }
 }

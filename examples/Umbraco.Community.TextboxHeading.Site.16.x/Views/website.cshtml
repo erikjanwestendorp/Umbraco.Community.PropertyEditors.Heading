@@ -1,12 +1,5 @@
-﻿@using Umbraco.Cms.Web.Common.PublishedModels;
-@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Community.TextboxHeading.Site.ContentTypes.Website>
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Community.TextboxHeading.Site.ContentTypes.Website>
 @{
 	Layout = null;
 }
-
-<p>@Model.Heading.Size -  @Model.Heading.Text</p>
-
-
-<umb-community-heading heading="@Model.Heading" />
-
-<h3></h3>
+<umb-community-heading heading="@Model.Heading" class="my test class" id="my-id" aria-label="Introduction"/>
