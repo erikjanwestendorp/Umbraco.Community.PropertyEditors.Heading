@@ -1,14 +1,14 @@
-import { LitElement as c, html as f, property as h, customElement as y } from "@umbraco-cms/backoffice/external/lit";
+import { LitElement as v, html as f, property as h, customElement as y } from "@umbraco-cms/backoffice/external/lit";
 import { UmbElementMixin as m } from "@umbraco-cms/backoffice/element-api";
 import { UmbChangeEvent as _ } from "@umbraco-cms/backoffice/event";
-var g = Object.defineProperty, E = Object.getOwnPropertyDescriptor, v = (i) => {
+var g = Object.defineProperty, E = Object.getOwnPropertyDescriptor, c = (i) => {
   throw TypeError(i);
 }, n = (i, t, e, s) => {
   for (var a = s > 1 ? void 0 : s ? E(t, e) : t, o = i.length - 1, p; o >= 0; o--)
     (p = i[o]) && (a = (s ? p(t, e, a) : p(a)) || a);
   return s && a && g(t, e, a), a;
-}, w = (i, t, e) => t.has(i) || v("Cannot " + e), x = (i, t, e) => t.has(i) ? v("Cannot add the same private member more than once") : t instanceof WeakSet ? t.add(i) : t.set(i, e), d = (i, t, e) => (w(i, t, "access private method"), e), l, u;
-let r = class extends m(c) {
+}, w = (i, t, e) => t.has(i) || c("Cannot " + e), x = (i, t, e) => t.has(i) ? c("Cannot add the same private member more than once") : t instanceof WeakSet ? t.add(i) : t.set(i, e), d = (i, t, e) => (w(i, t, "access private method"), e), l, u;
+let r = class extends m(v) {
   constructor() {
     super(...arguments), x(this, l), this._sizeOptions = [];
   }
@@ -23,19 +23,12 @@ let r = class extends m(c) {
     var i, t;
     return f`
       <div style="display: flex; width: 100%;">
-        <div style="flex: 0 0 80%;">
-          <uui-input
-            id="text"
-            value=${((i = this.value) == null ? void 0 : i.text) ?? ""}
-            style="width: 100%;"
-            @input=${(e) => d(this, l, u).call(this, "text", e.target.value)}>
-          </uui-input>
-        </div>
-        <div style="flex: 0 0 20%; margin-left: 2px;">
+        <!-- Switched order: Select first, then Input -->
+        <div style="flex: 0 0 10%; margin-right: 2px;">
           <uui-select
             label="Select size"
             placeholder="Select size..."
-            value=${((t = this.value) == null ? void 0 : t.size) ?? ""}
+            value=${((i = this.value) == null ? void 0 : i.size) ?? ""}
             style="width: 100%;"
             .options=${this._sizeOptions.map((e) => {
       var s;
@@ -48,7 +41,15 @@ let r = class extends m(c) {
       const s = e.target;
       d(this, l, u).call(this, "size", s.value);
     }}>
-           </uui-select>
+          </uui-select>
+        </div>
+        <div style="flex: 0 0 90%;">
+          <uui-input
+            id="text"
+            value=${((t = this.value) == null ? void 0 : t.text) ?? ""}
+            style="width: 100%;"
+            @input=${(e) => d(this, l, u).call(this, "text", e.target.value)}>
+          </uui-input>
         </div>
       </div>
     `;
@@ -76,4 +77,4 @@ export {
   b as default,
   r as headingPropertyEditorElement
 };
-//# sourceMappingURL=heading-property-editor.element-CoNEBS3t.js.map
+//# sourceMappingURL=heading-property-editor.element-B9ZRBHK7.js.map

@@ -59,16 +59,8 @@ export class headingPropertyEditorElement
   render() {
     return html`
       <div style="display: flex; width: 100%;">
-        <div style="flex: 0 0 80%;">
-          <uui-input
-            id="text"
-            value=${this.value?.text ?? ""}
-            style="width: 100%;"
-            @input=${(e: UUIInputEvent) =>
-              this.#setValueProperty("text", e.target.value as string)}>
-          </uui-input>
-        </div>
-        <div style="flex: 0 0 20%; margin-left: 2px;">
+        <!-- Switched order: Select first, then Input -->
+        <div style="flex: 0 0 10%; margin-right: 2px;">
           <uui-select
             label="Select size"
             placeholder="Select size..."
@@ -84,7 +76,16 @@ export class headingPropertyEditorElement
               const target = e.target as HTMLSelectElement;
               this.#setValueProperty("size", target.value);
             }}>
-           </uui-select>
+          </uui-select>
+        </div>
+        <div style="flex: 0 0 90%;">
+          <uui-input
+            id="text"
+            value=${this.value?.text ?? ""}
+            style="width: 100%;"
+            @input=${(e: UUIInputEvent) =>
+              this.#setValueProperty("text", e.target.value as string)}>
+          </uui-input>
         </div>
       </div>
     `;
