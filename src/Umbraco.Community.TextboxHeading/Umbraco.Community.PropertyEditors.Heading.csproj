@@ -12,7 +12,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Umbraco.Community.TextboxHeading.Assets\Umbraco.Community.TextboxHeading.Assets.csproj" />
+		<ProjectReference Include="..\Umbraco.Community.TextboxHeading.Assets\Umbraco.Community.PropertyEditors.Heading.Assets.csproj" />
 	</ItemGroup>
 
 </Project>
