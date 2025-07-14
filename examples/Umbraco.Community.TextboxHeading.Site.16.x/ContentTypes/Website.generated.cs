@@ -50,12 +50,28 @@ namespace Umbraco.Community.TextboxHeading.Site.ContentTypes
 		// properties
 
 		///<summary>
+		/// Components
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.0.0+9812630")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("components")]
+		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel Components => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "components");
+
+		///<summary>
 		/// Dropdown
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.0.0+9812630")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("dropdown")]
 		public virtual string Dropdown => this.Value<string>(_publishedValueFallback, "dropdown");
+
+		///<summary>
+		/// Hallo
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.0.0+9812630")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("hallo")]
+		public virtual string Hallo => this.Value<string>(_publishedValueFallback, "hallo");
 
 		///<summary>
 		/// Heading

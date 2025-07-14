@@ -2,8 +2,8 @@ import { html, customElement, property, state, query} from '@umbraco-cms/backoff
 import type {UUISelectElement, UUISelectEvent } from '@umbraco-cms/backoffice/external/uui';
 import {
 	type UmbPropertyEditorUiElement,
-	UmbPropertyValueChangeEvent,
 } from '@umbraco-cms/backoffice/property-editor';
+import { UmbChangeEvent } from '@umbraco-cms/backoffice/event';
 import { UmbLitElement } from '@umbraco-cms/backoffice/lit-element';
 
 
@@ -66,7 +66,7 @@ export class PropertyEditorUIHeadingTypeElement extends UmbLitElement implements
 
 		this.value = values;
 
-		this.dispatchEvent(new UmbPropertyValueChangeEvent());
+		this.dispatchEvent(new UmbChangeEvent());
 	}
 
 	override render() {

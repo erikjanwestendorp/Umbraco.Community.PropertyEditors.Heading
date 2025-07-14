@@ -1,5 +1,5 @@
-import { html as d, state as u, property as c, query as v, customElement as m } from "@umbraco-cms/backoffice/external/lit";
-import { UmbPropertyValueChangeEvent as _ } from "@umbraco-cms/backoffice/property-editor";
+import { html as y, state as c, property as u, query as v, customElement as m } from "@umbraco-cms/backoffice/external/lit";
+import { UmbChangeEvent as _ } from "@umbraco-cms/backoffice/event";
 import { UmbLitElement as f } from "@umbraco-cms/backoffice/lit-element";
 var g = Object.defineProperty, H = Object.getOwnPropertyDescriptor, h = (e) => {
   throw TypeError(e);
@@ -7,7 +7,7 @@ var g = Object.defineProperty, H = Object.getOwnPropertyDescriptor, h = (e) => {
   for (var i = a > 1 ? void 0 : a ? H(t, r) : t, o = e.length - 1, l; o >= 0; o--)
     (l = e[o]) && (i = (a ? l(t, r, i) : l(i)) || i);
   return a && i && g(t, r, i), i;
-}, E = (e, t, r) => t.has(e) || h("Cannot " + r), P = (e, t, r) => t.has(e) ? h("Cannot add the same private member more than once") : t instanceof WeakSet ? t.add(e) : t.set(e, r), b = (e, t, r) => (E(e, t, "access private method"), r), p, y;
+}, E = (e, t, r) => t.has(e) || h("Cannot " + r), P = (e, t, r) => t.has(e) ? h("Cannot add the same private member more than once") : t instanceof WeakSet ? t.add(e) : t.set(e, r), b = (e, t, r) => (E(e, t, "access private method"), r), p, d;
 let n = class extends f {
   constructor() {
     super(...arguments), P(this, p), this._selection = [], this.readonly = !1, this._options = [
@@ -33,34 +33,34 @@ let n = class extends f {
     }));
   }
   render() {
-    return d`
+    return y`
 			<umb-input-checkbox-list
 				.list=${this._list}
 				.selection=${this._selection}
 				?readonly=${this.readonly}
-				@change=${b(this, p, y)}></umb-input-checkbox-list>
+				@change=${b(this, p, d)}></umb-input-checkbox-list>
 		`;
   }
 };
 p = /* @__PURE__ */ new WeakSet();
-y = function(e) {
+d = function(e) {
   let t = e.target.value, r = [];
   typeof t == "string" ? r = t.split(",").map((a) => a.trim()) : Array.isArray(t) ? r = t.filter((a) => typeof a == "string") : t != null && (r = [String(t)]), this.value = r, this.dispatchEvent(new _());
 };
 s([
-  u()
+  c()
 ], n.prototype, "_selection", 2);
 s([
-  c({ type: Array })
+  u({ type: Array })
 ], n.prototype, "value", 1);
 s([
-  c({ type: Boolean, reflect: !0 })
+  u({ type: Boolean, reflect: !0 })
 ], n.prototype, "readonly", 2);
 s([
   v("uui-select")
 ], n.prototype, "selectEl", 2);
 s([
-  u()
+  c()
 ], n.prototype, "_options", 2);
 n = s([
   m("umb-property-editor-ui-heading-type")
@@ -70,4 +70,4 @@ export {
   n as PropertyEditorUIHeadingTypeElement,
   U as default
 };
-//# sourceMappingURL=property-editor-ui-heading-type.element-BdTl6R2Q.js.map
+//# sourceMappingURL=property-editor-ui-heading-type.element-CS3XrbtD.js.map
