@@ -1,4 +1,4 @@
-import { html as y, state as c, property as u, query as v, customElement as m } from "@umbraco-cms/backoffice/external/lit";
+import { html as m, state as c, property as u, query as y, customElement as v } from "@umbraco-cms/backoffice/external/lit";
 import { UmbChangeEvent as _ } from "@umbraco-cms/backoffice/event";
 import { UmbLitElement as f } from "@umbraco-cms/backoffice/lit-element";
 var g = Object.defineProperty, H = Object.getOwnPropertyDescriptor, h = (e) => {
@@ -33,7 +33,7 @@ let n = class extends f {
     }));
   }
   render() {
-    return y`
+    return m`
 			<umb-input-checkbox-list
 				.list=${this._list}
 				.selection=${this._selection}
@@ -45,7 +45,15 @@ let n = class extends f {
 p = /* @__PURE__ */ new WeakSet();
 d = function(e) {
   let t = e.target.value, r = [];
-  typeof t == "string" ? r = t.split(",").map((a) => a.trim()) : Array.isArray(t) ? r = t.filter((a) => typeof a == "string") : t != null && (r = [String(t)]), this.value = r, this.dispatchEvent(new _());
+  if (typeof t == "string")
+    r = t.split(",").map((a) => a.trim()).filter((a) => a !== "");
+  else if (Array.isArray(t))
+    r = t.filter((a) => typeof a == "string" && a.trim() !== "");
+  else if (t != null) {
+    const a = String(t).trim();
+    a !== "" && (r = [a]);
+  }
+  this.value = r, this.dispatchEvent(new _());
 };
 s([
   c()
@@ -57,17 +65,17 @@ s([
   u({ type: Boolean, reflect: !0 })
 ], n.prototype, "readonly", 2);
 s([
-  v("uui-select")
+  y("uui-select")
 ], n.prototype, "selectEl", 2);
 s([
   c()
 ], n.prototype, "_options", 2);
 n = s([
-  m("umb-property-editor-ui-heading-type")
+  v("umb-property-editor-ui-heading-type")
 ], n);
 const U = n;
 export {
   n as PropertyEditorUIHeadingTypeElement,
   U as default
 };
-//# sourceMappingURL=property-editor-ui-heading-type.element-CS3XrbtD.js.map
+//# sourceMappingURL=property-editor-ui-heading-type.element-Cl3axJCE.js.map
