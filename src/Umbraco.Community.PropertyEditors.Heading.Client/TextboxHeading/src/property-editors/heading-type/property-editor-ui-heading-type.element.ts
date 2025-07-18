@@ -34,23 +34,16 @@ export class PropertyEditorUIHeadingTypeElement extends UmbLitElement implements
 	selectEl?: UUISelectElement;
 
 	@state()
-	private _options: Array<Option> = [
-		{ name: 'Heading 1', value: 'H1' },
-		{ name: 'Heading 2', value: 'H2' },
-		{ name: 'Heading 3', value: 'H3' },
-		{ name: 'Heading 4', value: 'H4' },
-		{ name: 'Heading 5', value: 'H5' },
-		{ name: 'Heading 6', value: 'H6' },
-	];
+	private _options: Array<string> = ['H1', 'H2', 'H3', 'H4', 'H5', 'H6'];
 
 	private get _list(): Array<UmbCheckboxListItem> {
-		return this._options.map((opt) => ({
-			label: opt.name,
-			value: opt.value,
-			checked: this._selection.includes(opt.value),
+		return this._options.map((value) => ({
+			label: value,
+			value: value,
+			checked: this._selection.includes(value),
 		}));
 	}
-
+	
 	#onChange(e: UUISelectEvent) {
 		let raw = e.target.value;
 
