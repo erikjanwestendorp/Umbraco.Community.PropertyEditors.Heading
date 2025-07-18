@@ -57,17 +57,21 @@ export class PropertyEditorUIHeadingTypeElement extends UmbLitElement implements
 		let values: string[] = [];
 
 		if (typeof raw === 'string') {
-			values = raw.split(',').map(v => v.trim());
+			values = raw
+				.split(',')
+				.map((v) => v.trim())
+				.filter((v) => v !== '');
 		} else if (Array.isArray(raw)) {
-			values = raw.filter((v): v is string => typeof v === 'string');
+			values = raw.filter((v): v is string => typeof v === 'string' && v.trim() !== '');
 		} else if (raw != null) {
-			values = [String(raw)];
+			const v = String(raw).trim();
+			if (v !== '') values = [v];
 		}
 
 		this.value = values;
-
 		this.dispatchEvent(new UmbChangeEvent());
 	}
+
 
 	override render() {
 		return html`

@@ -44,16 +44,30 @@ export class headingPropertyEditorElement
   public set config(config: UmbPropertyEditorConfigCollection) {
     const allowedHeadings = config.getValueByAlias("allowedHeadings");
 
-      if (Array.isArray(allowedHeadings)) {
-        this._sizeOptions = allowedHeadings.map((heading: string) => ({
-          value: heading,
-          name: heading
-        }));
-      } else {
-        this._sizeOptions = []; 
-      }
+    if (Array.isArray(allowedHeadings)) {
+      const filtered = allowedHeadings.filter((h) => typeof h === 'string' && h.trim() !== '');
 
-      this.requestUpdate(); 
+      this._sizeOptions = filtered.map((heading: string) => ({
+        value: heading,
+        name: heading,
+      }));
+
+      const currentSize = this.value?.size;
+      const isValid = this._sizeOptions.some(opt => opt.value === currentSize);
+
+      if (!isValid && this._sizeOptions.length > 0) {
+        const newValue = {
+          ...this.value,
+          size: this._sizeOptions[0].value
+        };
+        this.value = newValue;
+        this.dispatchEvent(new UmbChangeEvent());
+      }
+    } else {
+      this._sizeOptions = [];
+    }
+
+    this.requestUpdate();
   }
 
   render() {
