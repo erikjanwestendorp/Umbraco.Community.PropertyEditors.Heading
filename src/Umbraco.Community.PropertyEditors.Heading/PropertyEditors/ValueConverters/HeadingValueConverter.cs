@@ -13,7 +13,7 @@ public class HeadingValueConverter : PropertyValueConverterBase
     }
 
     public override Type GetPropertyValueType(IPublishedPropertyType propertyType)
-        => typeof(Models.Heading);
+        => typeof(Models.HtmlHeading);
 
     public override PropertyCacheLevel GetPropertyCacheLevel(IPublishedPropertyType propertyType)
         => PropertyCacheLevel.Element;
@@ -34,7 +34,7 @@ public class HeadingValueConverter : PropertyValueConverterBase
         };
         options.Converters.Add(new JsonStringEnumConverter());
 
-        var heading = JsonSerializer.Deserialize<Models.Heading>(value, options);
+        var heading = JsonSerializer.Deserialize<Models.HtmlHeading>(value, options);
 
         return heading;
 

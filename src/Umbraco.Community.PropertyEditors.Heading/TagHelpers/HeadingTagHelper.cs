@@ -5,7 +5,7 @@ namespace Umbraco.Community.PropertyEditors.Heading.TagHelpers;
 [HtmlTargetElement("umb-community-heading")]
 public class HeadingTagHelper : TagHelper
 {
-    public Models.Heading? Heading { get; set; }
+    public Models.HtmlHeading? Heading { get; set; }
     public string? Id { get; set; }
     public string? Class { get; set; }
     public string? AriaLabel { get; set; }
