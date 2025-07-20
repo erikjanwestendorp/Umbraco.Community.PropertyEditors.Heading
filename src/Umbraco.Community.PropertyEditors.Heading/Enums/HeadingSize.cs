@@ -1,6 +1,6 @@
 ﻿namespace Umbraco.Community.PropertyEditors.Heading.Enums;
 
-public enum HtmlHeading
+public enum HeadingSize
 {
     H1,
     H2,
