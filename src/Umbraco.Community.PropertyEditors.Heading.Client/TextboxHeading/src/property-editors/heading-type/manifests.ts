@@ -2,11 +2,11 @@ import type { ManifestPropertyEditorUi } from '@umbraco-cms/backoffice/property-
 
 export const manifest: ManifestPropertyEditorUi = {
 	type: 'propertyEditorUi',
-	alias: 'Umb.Community.PropertyEditorUi.HeadingType', //TODO FIX Naming
+	alias: 'Umb.Community.PropertyEditorUi.HeadingSize',
 	name: 'Heading Type Property Editor UI',
-	element: () => import('./property-editor-ui-heading-type.element.js'),
+	element: () => import('./property-editor-ui-heading-size.element.js'),
 	meta: {
-		label: 'Heading Type',
+		label: 'Heading Size',
 		icon: 'icon-heading-2',
 		group: 'Community',
 	},

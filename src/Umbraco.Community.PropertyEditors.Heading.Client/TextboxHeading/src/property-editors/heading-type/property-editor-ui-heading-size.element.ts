@@ -9,12 +9,11 @@ import { UmbLitElement } from '@umbraco-cms/backoffice/lit-element';
 
 type UmbCheckboxListItem = { label: string; value: string; checked: boolean };
 /**
- * @element umb-property-editor-ui-heading-type 
+ * @element umb-community-property-editor-ui-heading-size
  */
 
-//TODO Copy from property-editor-ui-value-type.element.ts
-@customElement('umb-property-editor-ui-heading-type')
-export class PropertyEditorUIHeadingTypeElement extends UmbLitElement implements UmbPropertyEditorUiElement {
+@customElement('umb-community-property-editor-ui-heading-size')
+export class PropertyEditorUIHeadingSizeElement extends UmbLitElement implements UmbPropertyEditorUiElement {
 	@state()
     private _selection: Array<string> = [];
 
@@ -77,10 +76,10 @@ export class PropertyEditorUIHeadingTypeElement extends UmbLitElement implements
 	}
 }
 
-export default PropertyEditorUIHeadingTypeElement;
+export default PropertyEditorUIHeadingSizeElement;
 
 declare global {
 	interface HTMLElementTagNameMap {
-		'umb-property-editor-ui-heading-type': PropertyEditorUIHeadingTypeElement;
+		'umb-community-property-editor-ui-heading-size': PropertyEditorUIHeadingSizeElement;
 	}
 }
