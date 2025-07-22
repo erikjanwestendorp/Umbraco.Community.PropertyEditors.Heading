@@ -37,7 +37,6 @@ const e = {
 ], t = {
   type: "propertyEditorUi",
   alias: "Umb.Community.PropertyEditorUi.HeadingSize",
-  //TODO FIX Naming
   name: "Heading Type Property Editor UI",
   element: () => import("./property-editor-ui-heading-size.element-2ybR-r7R.js"),
   meta: {

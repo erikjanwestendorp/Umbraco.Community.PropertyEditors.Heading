@@ -27,7 +27,6 @@ public class HeadingValueConverter : PropertyValueConverterBase
             return null;
         }
 
-
         var options = new JsonSerializerOptions
         {
             PropertyNameCaseInsensitive = true
@@ -37,6 +36,5 @@ public class HeadingValueConverter : PropertyValueConverterBase
         var heading = JsonSerializer.Deserialize<Models.HtmlHeading>(value, options);
 
         return heading;
-
     }
 }

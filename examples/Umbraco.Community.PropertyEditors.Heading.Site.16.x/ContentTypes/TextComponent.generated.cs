@@ -55,7 +55,7 @@ namespace Umbraco.Community.TextboxHeading.Site.ContentTypes
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.0.0+9812630")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("heading")]
-		public virtual global::Umbraco.Community.PropertyEditors.Heading.Models.Heading Heading => this.Value<global::Umbraco.Community.PropertyEditors.Heading.Models.Heading>(_publishedValueFallback, "heading");
+		public virtual global::Umbraco.Community.PropertyEditors.Heading.Models.HtmlHeading Heading => this.Value<global::Umbraco.Community.PropertyEditors.Heading.Models.HtmlHeading>(_publishedValueFallback, "heading");
 
 		///<summary>
 		/// Text
