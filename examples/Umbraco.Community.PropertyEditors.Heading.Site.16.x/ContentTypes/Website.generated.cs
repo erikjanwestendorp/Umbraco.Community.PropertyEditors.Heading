@@ -66,6 +66,14 @@ namespace Umbraco.Community.TextboxHeading.Site.ContentTypes
 		public virtual string Dropdown => this.Value<string>(_publishedValueFallback, "dropdown");
 
 		///<summary>
+		/// H
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.0.0+9812630")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("h")]
+		public virtual global::Umbraco.Community.PropertyEditors.Heading.Models.HtmlHeading H => this.Value<global::Umbraco.Community.PropertyEditors.Heading.Models.HtmlHeading>(_publishedValueFallback, "h");
+
+		///<summary>
 		/// Hallo
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.0.0+9812630")]
@@ -74,12 +82,28 @@ namespace Umbraco.Community.TextboxHeading.Site.ContentTypes
 		public virtual string Hallo => this.Value<string>(_publishedValueFallback, "hallo");
 
 		///<summary>
+		/// Head
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.0.0+9812630")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("head")]
+		public virtual global::Umbraco.Community.PropertyEditors.Heading.Models.HtmlHeading Head => this.Value<global::Umbraco.Community.PropertyEditors.Heading.Models.HtmlHeading>(_publishedValueFallback, "head");
+
+		///<summary>
 		/// Heading
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.0.0+9812630")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("heading")]
-		public virtual global::Umbraco.Community.PropertyEditors.Heading.Models.Heading Heading => this.Value<global::Umbraco.Community.PropertyEditors.Heading.Models.Heading>(_publishedValueFallback, "heading");
+		public virtual global::Umbraco.Community.PropertyEditors.Heading.Models.HtmlHeading Heading => this.Value<global::Umbraco.Community.PropertyEditors.Heading.Models.HtmlHeading>(_publishedValueFallback, "heading");
+
+		///<summary>
+		/// Last
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.0.0+9812630")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("last")]
+		public virtual global::Umbraco.Community.PropertyEditors.Heading.Models.HtmlHeading Last => this.Value<global::Umbraco.Community.PropertyEditors.Heading.Models.HtmlHeading>(_publishedValueFallback, "last");
 
 		///<summary>
 		/// Tekst
