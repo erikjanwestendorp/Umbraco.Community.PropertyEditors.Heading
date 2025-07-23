@@ -1,4 +1,4 @@
-# <img src="https://raw.githubusercontent.com/erikjanwestendorp/TextboxHeading/main/assets/heading-icon-24.svg" width="20" style="vertical-align:middle;" /> Umbraco.Community.PropertyEditors.Heading
+# <img src="https://raw.githubusercontent.com/erikjanwestendorp/Umbraco.Community.PropertyEditors.Heading/main/assets/heading-icon-24.svg" width="20" style="vertical-align:middle;" /> Umbraco.Community.PropertyEditors.Heading
 
 Simple property editor that allows you to choose the heading size.
 
