@@ -4,7 +4,18 @@
 		<TargetFramework>net9.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<Version>1.0.0-beta1</Version>
+		<PackageId>Umbraco.Community.PropertyEditors.Heading</PackageId>
+		<Product>Umbraco.Community.PropertyEditors.Heading</Product>
+		<Title>Umbraco.Community.PropertyEditors.Heading</Title>
+		<Description>Umbraco Property Editor to add a HTML Heading</Description>
+		<Authors>Erik-Jan Westendorp</Authors>
+		<PackageTags>umbraco plugin package html heading</PackageTags>
 		<PackageIcon>heading-icon-128.png</PackageIcon>
+		<RepositoryType>git</RepositoryType>
 	</PropertyGroup>
 
 	<ItemGroup>

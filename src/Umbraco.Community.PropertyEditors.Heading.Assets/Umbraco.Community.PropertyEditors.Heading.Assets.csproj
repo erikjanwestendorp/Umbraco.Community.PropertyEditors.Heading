@@ -4,9 +4,19 @@
 		<TargetFramework>net9.0</TargetFramework>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
-		<StaticWebAssetBasePath>App_Plugins/TextboxHeading</StaticWebAssetBasePath>
-		<Description>Assets package for Umbraco.Community.TextboxHeading</Description>
+		<StaticWebAssetBasePath>App_Plugins/Heading</StaticWebAssetBasePath>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<Version>1.0.0-beta1</Version>
+		<PackageId>Umbraco.Community.PropertyEditors.Heading.Assets</PackageId>
+		<Product>Umbraco.Community.PropertyEditors.Heading.Assets</Product>
+		<Title>Umbraco.Community.PropertyEditors.Heading.Assets</Title>
+		<Description>Contains the static assets needed to run Umbraco.Community.PropertyEditors.Heading</Description>
+		<Authors>Erik-Jan Westendorp</Authors>
+		<PackageTags>umbraco plugin package html heading</PackageTags>
 		<PackageIcon>heading-icon-128.png</PackageIcon>
+		<RepositoryType>git</RepositoryType>
 	</PropertyGroup>
 
 	<ItemGroup>
