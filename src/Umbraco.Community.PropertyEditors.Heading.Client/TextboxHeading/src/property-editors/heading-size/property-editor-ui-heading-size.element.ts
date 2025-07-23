@@ -28,7 +28,6 @@ export class PropertyEditorUIHeadingSizeElement extends UmbLitElement implements
 	@property({ type: Boolean, reflect: true })
 	readonly = false;
 
-
 	@query('uui-select')
 	selectEl?: UUISelectElement;
 
@@ -63,7 +62,6 @@ export class PropertyEditorUIHeadingSizeElement extends UmbLitElement implements
 		this.value = values;
 		this.dispatchEvent(new UmbChangeEvent());
 	}
-
 
 	override render() {
 		return html`

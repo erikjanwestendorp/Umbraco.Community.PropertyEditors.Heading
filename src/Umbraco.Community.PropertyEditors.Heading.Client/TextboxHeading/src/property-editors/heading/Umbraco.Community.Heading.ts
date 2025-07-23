@@ -5,7 +5,7 @@ export const manifest: ManifestPropertyEditorSchema = {
 	name: 'Heading',
 	alias: 'Umbraco.Community.Heading',
 	meta: {
-		defaultPropertyEditorUiAlias: 'TextboxHeading.propertyEditorUI', //TODO Reaname
+		defaultPropertyEditorUiAlias: 'Umb.Community.PropertyEditorUi.Heading',
 		settings: {
 			properties: [
 				{

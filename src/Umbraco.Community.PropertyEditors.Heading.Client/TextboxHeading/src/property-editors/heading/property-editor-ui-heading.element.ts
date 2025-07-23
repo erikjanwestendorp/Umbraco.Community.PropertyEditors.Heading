@@ -20,8 +20,8 @@ type PropertyEditorValueType = {
   size?: string;
 };
 
-@customElement("heading-property-editor")
-export class headingPropertyEditorElement
+@customElement("umb-community-property-editor-ui-heading")
+export class PropertyEditorUIHeadingElement
   extends UmbElementMixin(LitElement)
   implements UmbPropertyEditorUiElement
 {
@@ -103,10 +103,10 @@ export class headingPropertyEditorElement
   }
 }
 
-export default headingPropertyEditorElement;
+export default PropertyEditorUIHeadingElement;
 
 declare global {
   interface HTMLElementTagNameMap {
-    "textbox-heading-property-editor": headingPropertyEditorElement;
+    "umb-community-property-editor-ui-heading": PropertyEditorUIHeadingElement;
   }
 }
