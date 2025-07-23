@@ -26,6 +26,10 @@
 	  <ProjectReference Include="..\..\src\Umbraco.Community.PropertyEditors.Heading\Umbraco.Community.PropertyEditors.Heading.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+		<PackageReference Include="uSync" Version="16.0.1" />
+	</ItemGroup>
+
 	<PropertyGroup>
 		<!-- Razor files are needed for the backoffice to work correctly -->
 		<CopyRazorGenerateFilesToPublishDirectory>true</CopyRazorGenerateFilesToPublishDirectory>
