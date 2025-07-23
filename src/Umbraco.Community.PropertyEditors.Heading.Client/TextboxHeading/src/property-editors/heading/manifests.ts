@@ -3,14 +3,14 @@ import { manifest as headingSchemaManifest } from './Umbraco.Community.Heading.j
 export const manifests: Array<UmbExtensionManifest> = [
 	{
 		type: 'propertyEditorUi',
-		alias: 'TextboxHeading.propertyEditorUI',  //TODO Reaname
+		alias: 'Umb.Community.PropertyEditorUi.Heading',
 		name: 'Heading Property Editor UI',
-		element: () => import("./heading-property-editor.element.js"), //TODO Rename file to somthing with UI
+		element: () => import("./property-editor-ui-heading.element.js"),
 		meta: {
 			label: 'Heading',
 			icon: 'icon-heading-1',
 			group: 'community',
-			propertyEditorSchemaAlias: 'Umbraco.Community.Heading', //TODO Change
+			propertyEditorSchemaAlias: 'Umbraco.Community.Heading',
 			supportsReadOnly: true,
 		},
 	},

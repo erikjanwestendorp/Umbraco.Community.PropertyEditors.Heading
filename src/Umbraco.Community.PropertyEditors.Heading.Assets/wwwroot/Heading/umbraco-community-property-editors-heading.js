@@ -3,8 +3,7 @@ const e = {
   name: "Heading",
   alias: "Umbraco.Community.Heading",
   meta: {
-    defaultPropertyEditorUiAlias: "TextboxHeading.propertyEditorUI",
-    //TODO Reaname
+    defaultPropertyEditorUiAlias: "Umb.Community.PropertyEditorUi.Heading",
     settings: {
       properties: [
         {
@@ -19,17 +18,14 @@ const e = {
 }, i = [
   {
     type: "propertyEditorUi",
-    alias: "TextboxHeading.propertyEditorUI",
-    //TODO Reaname
+    alias: "Umb.Community.PropertyEditorUi.Heading",
     name: "Heading Property Editor UI",
-    element: () => import("./heading-property-editor.element-0WyAHXGp.js"),
-    //TODO Rename file to somthing with UI
+    element: () => import("./property-editor-ui-heading.element-vzvOr01w.js"),
     meta: {
       label: "Heading",
       icon: "icon-heading-1",
       group: "community",
       propertyEditorSchemaAlias: "Umbraco.Community.Heading",
-      //TODO Change
       supportsReadOnly: !0
     }
   },

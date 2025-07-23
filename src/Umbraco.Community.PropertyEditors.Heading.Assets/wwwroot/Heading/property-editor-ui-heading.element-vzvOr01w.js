@@ -1,5 +1,5 @@
-import { LitElement as f, html as _, property as h, customElement as m } from "@umbraco-cms/backoffice/external/lit";
-import { UmbElementMixin as y } from "@umbraco-cms/backoffice/element-api";
+import { LitElement as m, html as f, property as h, customElement as y } from "@umbraco-cms/backoffice/external/lit";
+import { UmbElementMixin as _ } from "@umbraco-cms/backoffice/element-api";
 import { UmbChangeEvent as d } from "@umbraco-cms/backoffice/event";
 var g = Object.defineProperty, w = Object.getOwnPropertyDescriptor, c = (i) => {
   throw TypeError(i);
@@ -8,7 +8,7 @@ var g = Object.defineProperty, w = Object.getOwnPropertyDescriptor, c = (i) => {
     (s = i[l]) && (r = (a ? s(t, e, r) : s(r)) || r);
   return a && r && g(t, e, r), r;
 }, E = (i, t, e) => t.has(i) || c("Cannot " + e), z = (i, t, e) => t.has(i) ? c("Cannot add the same private member more than once") : t instanceof WeakSet ? t.add(i) : t.set(i, e), v = (i, t, e) => (E(i, t, "access private method"), e), o, u;
-let n = class extends y(f) {
+let n = class extends _(m) {
   constructor() {
     super(...arguments), z(this, o), this._sizeOptions = [];
   }
@@ -35,7 +35,7 @@ let n = class extends y(f) {
   }
   render() {
     var i, t;
-    return _`
+    return f`
       <div style="display: flex; width: 100%;">
         <div style="width: 60px; margin-right: 2px;">
           <uui-select
@@ -81,11 +81,11 @@ p([
   h({ attribute: !1 })
 ], n.prototype, "config", 1);
 n = p([
-  m("heading-property-editor")
+  y("umb-community-property-editor-ui-heading")
 ], n);
-const V = n;
+const b = n;
 export {
-  V as default,
-  n as headingPropertyEditorElement
+  n as PropertyEditorUIHeadingElement,
+  b as default
 };
-//# sourceMappingURL=heading-property-editor.element-0WyAHXGp.js.map
+//# sourceMappingURL=property-editor-ui-heading.element-vzvOr01w.js.map
