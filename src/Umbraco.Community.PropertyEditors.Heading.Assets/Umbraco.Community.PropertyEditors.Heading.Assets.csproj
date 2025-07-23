@@ -16,11 +16,17 @@
 		<Authors>Erik-Jan Westendorp</Authors>
 		<PackageTags>umbraco plugin package html heading</PackageTags>
 		<PackageIcon>heading-icon-128.png</PackageIcon>
+		<PackageProjectUrl>https://github.com/erikjanwestendorp/Umbraco.Community.PropertyEditors.Heading</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/erikjanwestendorp/Umbraco.Community.PropertyEditors.Heading</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<None Include="..\..\assets\heading-icon-128.png" Pack="true" PackagePath="\" />
+		<None Include="..\..\README.md" Pack="true" PackagePath="\" />
+		<None Include="..\..\LICENSE" Pack="true" PackagePath="\" />
 	</ItemGroup>
 
 
