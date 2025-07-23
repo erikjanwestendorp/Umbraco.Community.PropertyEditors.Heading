@@ -16,7 +16,7 @@ using Umbraco.Cms.Infrastructure.ModelsBuilder;
 using Umbraco.Cms.Core;
 using Umbraco.Extensions;
 
-namespace Umbraco.Community.TextboxHeading.Site.ContentTypes
+namespace Umbraco.Community.PropertyEditors.Heading.Site.ContentTypes
 {
 	/// <summary>File</summary>
 	[PublishedModel("File")]

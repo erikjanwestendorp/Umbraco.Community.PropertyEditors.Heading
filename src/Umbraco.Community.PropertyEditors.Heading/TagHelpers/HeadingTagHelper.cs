@@ -1,11 +1,12 @@
 ﻿using Microsoft.AspNetCore.Razor.TagHelpers;
+using Umbraco.Community.PropertyEditors.Heading.Models;
 
 namespace Umbraco.Community.PropertyEditors.Heading.TagHelpers;
 
 [HtmlTargetElement("umb-community-heading")]
 public class HeadingTagHelper : TagHelper
 {
-    public Models.HtmlHeading? Heading { get; set; }
+    public HtmlHeading? Heading { get; set; }
     public string? Id { get; set; }
     public string? Class { get; set; }
     public string? AriaLabel { get; set; }
