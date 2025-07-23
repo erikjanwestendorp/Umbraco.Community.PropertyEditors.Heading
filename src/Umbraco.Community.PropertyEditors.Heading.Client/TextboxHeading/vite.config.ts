@@ -7,7 +7,7 @@ export default defineConfig({
       formats: ["es"],
        fileName: "umbraco-community-property-editors-heading",
     },
-    outDir: "../../Umbraco.Community.PropertyEditors.Heading.Assets/wwwroot/Heading",
+    outDir: "../../Umbraco.Community.PropertyEditors.Heading.Assets/wwwroot",
     emptyOutDir: true,
     sourcemap: true,
     rollupOptions: {
