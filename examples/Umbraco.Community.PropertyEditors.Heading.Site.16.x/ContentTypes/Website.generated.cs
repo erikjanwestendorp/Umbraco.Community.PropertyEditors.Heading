@@ -16,7 +16,7 @@ using Umbraco.Cms.Infrastructure.ModelsBuilder;
 using Umbraco.Cms.Core;
 using Umbraco.Extensions;
 
-namespace Umbraco.Community.TextboxHeading.Site.ContentTypes
+namespace Umbraco.Community.PropertyEditors.Heading.Site.ContentTypes
 {
 	/// <summary>Website</summary>
 	[PublishedModel("website")]
@@ -50,75 +50,11 @@ namespace Umbraco.Community.TextboxHeading.Site.ContentTypes
 		// properties
 
 		///<summary>
-		/// Components
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.0.0+9812630")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("components")]
-		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel Components => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "components");
-
-		///<summary>
-		/// Dropdown
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.0.0+9812630")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("dropdown")]
-		public virtual string Dropdown => this.Value<string>(_publishedValueFallback, "dropdown");
-
-		///<summary>
-		/// H
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.0.0+9812630")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("h")]
-		public virtual global::Umbraco.Community.PropertyEditors.Heading.Models.HtmlHeading H => this.Value<global::Umbraco.Community.PropertyEditors.Heading.Models.HtmlHeading>(_publishedValueFallback, "h");
-
-		///<summary>
-		/// Hallo
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.0.0+9812630")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("hallo")]
-		public virtual string Hallo => this.Value<string>(_publishedValueFallback, "hallo");
-
-		///<summary>
-		/// Head
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.0.0+9812630")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("head")]
-		public virtual global::Umbraco.Community.PropertyEditors.Heading.Models.HtmlHeading Head => this.Value<global::Umbraco.Community.PropertyEditors.Heading.Models.HtmlHeading>(_publishedValueFallback, "head");
-
-		///<summary>
 		/// Heading
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.0.0+9812630")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("heading")]
 		public virtual global::Umbraco.Community.PropertyEditors.Heading.Models.HtmlHeading Heading => this.Value<global::Umbraco.Community.PropertyEditors.Heading.Models.HtmlHeading>(_publishedValueFallback, "heading");
-
-		///<summary>
-		/// Last
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.0.0+9812630")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("last")]
-		public virtual global::Umbraco.Community.PropertyEditors.Heading.Models.HtmlHeading Last => this.Value<global::Umbraco.Community.PropertyEditors.Heading.Models.HtmlHeading>(_publishedValueFallback, "last");
-
-		///<summary>
-		/// Tekst
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.0.0+9812630")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("tekst")]
-		public virtual string Tekst => this.Value<string>(_publishedValueFallback, "tekst");
-
-		///<summary>
-		/// Text
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.0.0+9812630")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("text")]
-		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString Text => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "text");
 	}
 }
