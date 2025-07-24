@@ -3,7 +3,7 @@ name: Publish NuGet Packages
 on:
   push:
     tags:
-      - '*-beta*' 
+      - '*' 
 
 jobs:
   build-and-publish:
