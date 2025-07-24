@@ -8,7 +8,7 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<Version>1.0.0-beta2</Version>
+		<Version>1.0.0-beta3</Version>
 		<PackageId>Umbraco.Community.PropertyEditors.Heading.Assets</PackageId>
 		<Product>Umbraco.Community.PropertyEditors.Heading.Assets</Product>
 		<Title>Umbraco.Community.PropertyEditors.Heading.Assets</Title>
