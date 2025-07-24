@@ -1,0 +1,28 @@
+{
+	"$schema": "https://marketplace.umbraco.com/umbraco-marketplace-schema.json",
+    "AuthorDetails": {
+        "Name": "Erik-Jan Westendorp",
+        "Description": ".NET Developer at ilionx, Umbraco MVP",
+        "Url": "https://github.com/erikjanwestendorp",
+        "ImageUrl": "https://avatars.githubusercontent.com/erikjanwestendorp",
+        "SyncContributorsFromRepository": true
+    },
+    "Category": "Editor Tools",
+    "Screenshots": [
+        {
+            "ImageUrl": "https://raw.githubusercontent.com/erikjanwestendorp/Umbraco.Community.PropertyEditors.Heading/main/assets/data-type.png",
+            "Caption": "Data Type"
+        },
+        {
+            "ImageUrl": "https://raw.githubusercontent.com/erikjanwestendorp/Umbraco.Community.PropertyEditors.Heading/main/assets/property-editor.png",
+            "Caption": "Property Editor"
+        }        
+    ],
+
+    "LicenseTypes": [ "Free" ],
+    "PackageType": "Package",
+    "IssueTrackerUrl": "https://github.com/erikjanwestendorp/Umbraco.Community.PropertyEditors.Heading/issues",
+    "Title": "Heading",
+    "Description": "A lightweight and flexible property editor for headings in Umbraco CMS. Define heading level and alignment through the backoffice, and render easily using the built-in TagHelper.",
+    "Tags": ["PropertyEditors", "Heading", "EditorTools", "Umbraco"]
+}
