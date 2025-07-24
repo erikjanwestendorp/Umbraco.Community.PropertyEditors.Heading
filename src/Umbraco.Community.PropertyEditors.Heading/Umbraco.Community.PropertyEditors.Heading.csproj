@@ -13,7 +13,7 @@
 		<Title>Umbraco.Community.PropertyEditors.Heading</Title>
 		<Description>Umbraco Property Editor to add a HTML Heading</Description>
 		<Authors>Erik-Jan Westendorp</Authors>
-		<PackageTags>umbraco plugin package html heading</PackageTags>
+		<PackageTags>umbraco-marketplace umbraco plugin package html heading</PackageTags>
 		<PackageProjectUrl>https://github.com/erikjanwestendorp/Umbraco.Community.PropertyEditors.Heading</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/erikjanwestendorp/Umbraco.Community.PropertyEditors.Heading</RepositoryUrl>
 		<PackageIcon>heading-icon-128.png</PackageIcon>
