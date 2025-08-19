@@ -40,9 +40,18 @@ const e = {
     icon: "icon-heading-2",
     group: "Community"
   }
+}, a = {
+  type: "ufmComponent",
+  alias: "Umb.Markdown.HeadingValue",
+  name: "Heading Value UFM Component",
+  api: () => import("./heading-value.component-XGlILDUb.js"),
+  meta: {
+    alias: "umbHeadingValue"
+  }
 }, o = [
   ...i,
-  t
+  t,
+  a
 ];
 export {
   o as manifests
