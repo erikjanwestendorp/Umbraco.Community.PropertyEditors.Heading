@@ -18,14 +18,14 @@ using Umbraco.Extensions;
 
 namespace Umbraco.Community.PropertyEditors.Heading.Site.ContentTypes
 {
-	/// <summary>Website</summary>
-	[PublishedModel("website")]
-	public partial class Website : PublishedContentModel, IComponentsComposition
+	/// <summary>Text</summary>
+	[PublishedModel("textComponent")]
+	public partial class TextComponent : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.0.0+9812630")]
-		public new const string ModelTypeAlias = "website";
+		public new const string ModelTypeAlias = "textComponent";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.0.0+9812630")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.0.0+9812630")]
@@ -34,14 +34,14 @@ namespace Umbraco.Community.PropertyEditors.Heading.Site.ContentTypes
 			=> PublishedModelUtility.GetModelContentType(contentTypeCache, ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.0.0+9812630")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedContentTypeCache contentTypeCache, Expression<Func<Website, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedContentTypeCache contentTypeCache, Expression<Func<TextComponent, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(contentTypeCache), selector);
 #pragma warning restore 0109
 
 		private IPublishedValueFallback _publishedValueFallback;
 
 		// ctor
-		public Website(IPublishedContent content, IPublishedValueFallback publishedValueFallback)
+		public TextComponent(IPublishedElement content, IPublishedValueFallback publishedValueFallback)
 			: base(content, publishedValueFallback)
 		{
 			_publishedValueFallback = publishedValueFallback;
@@ -50,19 +50,11 @@ namespace Umbraco.Community.PropertyEditors.Heading.Site.ContentTypes
 		// properties
 
 		///<summary>
-		/// Heading: Add your page heading here.
+		/// Title: Add the title of the component.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.0.0+9812630")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("heading")]
-		public virtual global::Umbraco.Community.PropertyEditors.Heading.Models.HtmlHeading Heading => this.Value<global::Umbraco.Community.PropertyEditors.Heading.Models.HtmlHeading>(_publishedValueFallback, "heading");
-
-		///<summary>
-		/// Components: Add the disired components.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.0.0+9812630")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("components")]
-		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel Components => global::Umbraco.Community.PropertyEditors.Heading.Site.ContentTypes.ComponentsComposition.GetComponents(this, _publishedValueFallback);
+		[ImplementPropertyType("title")]
+		public virtual global::Umbraco.Community.PropertyEditors.Heading.Models.HtmlHeading Title => this.Value<global::Umbraco.Community.PropertyEditors.Heading.Models.HtmlHeading>(_publishedValueFallback, "title");
 	}
 }
