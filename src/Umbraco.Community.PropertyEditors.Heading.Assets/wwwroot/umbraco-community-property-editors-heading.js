@@ -44,7 +44,7 @@ const e = {
   type: "ufmComponent",
   alias: "Umb.Markdown.HeadingValue",
   name: "Heading Value UFM Component",
-  api: () => import("./heading-value.component-XGlILDUb.js"),
+  api: () => import("./heading-value.component-BzpXxfnc.js"),
   meta: {
     alias: "umbHeadingValue"
   }
