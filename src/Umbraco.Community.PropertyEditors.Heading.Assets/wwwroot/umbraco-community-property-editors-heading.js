@@ -40,11 +40,29 @@ const e = {
     icon: "icon-heading-2",
     group: "Community"
   }
-}, o = [
+}, a = {
+  type: "ufmComponent",
+  alias: "Umb.Markdown.HeadingValue",
+  name: "Heading Value UFM Component",
+  api: () => import("./heading-value.component-CV-4mR9N.js"),
+  meta: {
+    alias: "umbHeadingValue"
+  }
+}, o = {
+  type: "ufmFilter",
+  alias: "Umb.Filter.Prefix",
+  name: "Prefix UFM Filter",
+  api: () => import("./prefix.filter-BEoLQwOO.js"),
+  meta: {
+    alias: "prefix"
+  }
+}, n = [
   ...i,
-  t
+  t,
+  a,
+  o
 ];
 export {
-  o as manifests
+  n as manifests
 };
 //# sourceMappingURL=umbraco-community-property-editors-heading.js.map
