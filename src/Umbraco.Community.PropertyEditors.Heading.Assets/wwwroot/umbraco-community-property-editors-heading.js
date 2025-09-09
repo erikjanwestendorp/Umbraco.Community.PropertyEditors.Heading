@@ -48,21 +48,12 @@ const e = {
   meta: {
     alias: "umbHeadingValue"
   }
-}, o = {
-  type: "ufmFilter",
-  alias: "Umb.Filter.Prefix",
-  name: "Prefix UFM Filter",
-  api: () => import("./prefix.filter-BEoLQwOO.js"),
-  meta: {
-    alias: "prefix"
-  }
-}, n = [
+}, o = [
   ...i,
   t,
-  a,
-  o
+  a
 ];
 export {
-  n as manifests
+  o as manifests
 };
 //# sourceMappingURL=umbraco-community-property-editors-heading.js.map
