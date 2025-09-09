@@ -77,6 +77,7 @@ export class PropertyEditorUIHeadingElement
           <uui-select
             value=${this.value?.size ?? ""}
             style="width: 100%;"
+            label="Select heading size"
             .options=${
               this._sizeOptions.map((e) => ({
                 ...e,
@@ -94,6 +95,7 @@ export class PropertyEditorUIHeadingElement
             id="text"
             value=${this.value?.text ?? ""}
             style="width: 100%;"
+            label="Heading text"            
             @input=${(e: UUIInputEvent) =>
               this.#setValueProperty("text", e.target.value as string)}>
           </uui-input>

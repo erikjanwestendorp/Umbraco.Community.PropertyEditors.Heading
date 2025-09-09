@@ -20,7 +20,7 @@ const e = {
     type: "propertyEditorUi",
     alias: "Umb.Community.PropertyEditorUi.Heading",
     name: "Heading Property Editor UI",
-    element: () => import("./property-editor-ui-heading.element-vzvOr01w.js"),
+    element: () => import("./property-editor-ui-heading.element-w91sgKWz.js"),
     meta: {
       label: "Heading",
       icon: "icon-heading-1",
