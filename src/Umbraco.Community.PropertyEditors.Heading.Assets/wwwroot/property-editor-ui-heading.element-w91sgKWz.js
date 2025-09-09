@@ -1,16 +1,16 @@
 import { LitElement as m, html as f, property as h, customElement as y } from "@umbraco-cms/backoffice/external/lit";
 import { UmbElementMixin as _ } from "@umbraco-cms/backoffice/element-api";
-import { UmbChangeEvent as d } from "@umbraco-cms/backoffice/event";
+import { UmbChangeEvent as v } from "@umbraco-cms/backoffice/event";
 var g = Object.defineProperty, w = Object.getOwnPropertyDescriptor, c = (i) => {
   throw TypeError(i);
 }, p = (i, t, e, a) => {
   for (var r = a > 1 ? void 0 : a ? w(t, e) : t, l = i.length - 1, s; l >= 0; l--)
     (s = i[l]) && (r = (a ? s(t, e, r) : s(r)) || r);
   return a && r && g(t, e, r), r;
-}, E = (i, t, e) => t.has(i) || c("Cannot " + e), z = (i, t, e) => t.has(i) ? c("Cannot add the same private member more than once") : t instanceof WeakSet ? t.add(i) : t.set(i, e), v = (i, t, e) => (E(i, t, "access private method"), e), o, u;
+}, z = (i, t, e) => t.has(i) || c("Cannot " + e), E = (i, t, e) => t.has(i) ? c("Cannot add the same private member more than once") : t instanceof WeakSet ? t.add(i) : t.set(i, e), d = (i, t, e) => (z(i, t, "access private method"), e), o, u;
 let n = class extends _(m) {
   constructor() {
-    super(...arguments), z(this, o), this._sizeOptions = [];
+    super(...arguments), E(this, o), this._sizeOptions = [];
   }
   set config(i) {
     var e;
@@ -27,7 +27,7 @@ let n = class extends _(m) {
           ...this.value,
           size: this._sizeOptions[0].value
         };
-        this.value = s, this.dispatchEvent(new d());
+        this.value = s, this.dispatchEvent(new v());
       }
     } else
       this._sizeOptions = [];
@@ -41,6 +41,7 @@ let n = class extends _(m) {
           <uui-select
             value=${((i = this.value) == null ? void 0 : i.size) ?? ""}
             style="width: 100%;"
+            label="Select heading size"
             .options=${this._sizeOptions.map((e) => {
       var a;
       return {
@@ -50,7 +51,7 @@ let n = class extends _(m) {
     })}
             @change=${(e) => {
       const a = e.target;
-      v(this, o, u).call(this, "size", a.value);
+      d(this, o, u).call(this, "size", a.value);
     }}>
           </uui-select>
         </div>
@@ -59,7 +60,8 @@ let n = class extends _(m) {
             id="text"
             value=${((t = this.value) == null ? void 0 : t.text) ?? ""}
             style="width: 100%;"
-            @input=${(e) => v(this, o, u).call(this, "text", e.target.value)}>
+            label="Heading text"            
+            @input=${(e) => d(this, o, u).call(this, "text", e.target.value)}>
           </uui-input>
         </div>
       </div>
@@ -69,7 +71,7 @@ let n = class extends _(m) {
 o = /* @__PURE__ */ new WeakSet();
 u = function(i, t) {
   const e = { ...this.value };
-  e[i] = t, this.value = e, this.dispatchEvent(new d());
+  e[i] = t, this.value = e, this.dispatchEvent(new v());
 };
 p([
   h({ type: Object, attribute: !1 })
@@ -83,9 +85,9 @@ p([
 n = p([
   y("umb-community-property-editor-ui-heading")
 ], n);
-const b = n;
+const P = n;
 export {
   n as PropertyEditorUIHeadingElement,
-  b as default
+  P as default
 };
-//# sourceMappingURL=property-editor-ui-heading.element-vzvOr01w.js.map
+//# sourceMappingURL=property-editor-ui-heading.element-w91sgKWz.js.map
