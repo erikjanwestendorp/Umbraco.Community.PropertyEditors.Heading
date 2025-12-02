@@ -1,14 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
 	<PropertyGroup>
-		<TargetFramework>net9.0</TargetFramework>
+		<TargetFramework>net10.0</TargetFramework>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<StaticWebAssetBasePath>App_Plugins/Heading</StaticWebAssetBasePath>
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<Version>1.1.0</Version>
+		<Version>17.0.0</Version>
 		<PackageId>Umbraco.Community.PropertyEditors.Heading.Assets</PackageId>
 		<Product>Umbraco.Community.PropertyEditors.Heading.Assets</Product>
 		<Title>Umbraco.Community.PropertyEditors.Heading.Assets</Title>
