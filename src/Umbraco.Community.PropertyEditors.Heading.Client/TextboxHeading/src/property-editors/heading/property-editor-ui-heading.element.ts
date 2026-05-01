@@ -38,9 +38,14 @@ export class PropertyEditorUIHeadingElement
   @property({ type: Object, attribute: false })
   value?: PropertyEditorValueType;  
 
-  #setValueProperty(property: keyof PropertyEditorValueType, value: string | boolean) {
-    const newValue = { ...this.value }; 
-    (newValue as any)[property] = value;
+  #setTextProperty(value: string) {
+    const newValue = { ...this.value, text: value };
+    this.value = newValue;
+    this.dispatchEvent(new UmbChangeEvent());
+  }
+
+  #setSizeProperty(value: string) {
+    const newValue = { ...this.value, size: value };
     this.value = newValue;
     this.dispatchEvent(new UmbChangeEvent());
   }
@@ -106,7 +111,7 @@ export class PropertyEditorUIHeadingElement
             }
             @change=${(e: Event) => {
               const target = e.target as HTMLSelectElement;
-              this.#setValueProperty("size", target.value);
+              this.#setSizeProperty(target.value);
             }}>
           </uui-select>
         </div>
@@ -117,7 +122,7 @@ export class PropertyEditorUIHeadingElement
             style="width: 100%;"
             label="Heading text"            
             @input=${(e: UUIInputEvent) =>
-              this.#setValueProperty("text", e.target.value as string)}>
+              this.#setTextProperty(e.target.value as string)}>
           </uui-input>
         </div>
         <div style="display: flex; align-items: center; gap: 2px; margin-left: 2px;">

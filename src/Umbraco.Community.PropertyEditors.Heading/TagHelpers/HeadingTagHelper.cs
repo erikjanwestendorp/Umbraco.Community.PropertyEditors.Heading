@@ -26,10 +26,10 @@ public class HeadingTagHelper : TagHelper
         var encodedText = HtmlEncoder.Default.Encode(Heading.Text ?? string.Empty);
         var formattedText = encodedText;
 
-        if (Heading.Subscript)
+        if (Heading.Subscript && !Heading.Superscript)
             formattedText = $"<sub>{formattedText}</sub>";
 
-        if (Heading.Superscript)
+        if (Heading.Superscript && !Heading.Subscript)
             formattedText = $"<sup>{formattedText}</sup>";
 
         if (Heading.Underline)
