@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Razor.TagHelpers;
+﻿using System.Text.Encodings.Web;
+using Microsoft.AspNetCore.Razor.TagHelpers;
 using Umbraco.Community.PropertyEditors.Heading.Models;
 
 namespace Umbraco.Community.PropertyEditors.Heading.TagHelpers;
@@ -21,7 +22,26 @@ public class HeadingTagHelper : TagHelper
         var tagName = Heading.Size.ToString().ToLower();
         output.TagName = tagName;
         output.TagMode = TagMode.StartTagAndEndTag;
-        output.Content.SetContent(Heading.Text);
+
+        var encodedText = HtmlEncoder.Default.Encode(Heading.Text ?? string.Empty);
+        var formattedText = encodedText;
+
+        if (Heading.Subscript)
+            formattedText = $"<sub>{formattedText}</sub>";
+
+        if (Heading.Superscript)
+            formattedText = $"<sup>{formattedText}</sup>";
+
+        if (Heading.Underline)
+            formattedText = $"<u>{formattedText}</u>";
+
+        if (Heading.Italic)
+            formattedText = $"<em>{formattedText}</em>";
+
+        if (Heading.Bold)
+            formattedText = $"<strong>{formattedText}</strong>";
+
+        output.Content.SetHtmlContent(formattedText);
 
     
         if (!string.IsNullOrWhiteSpace(Class))
