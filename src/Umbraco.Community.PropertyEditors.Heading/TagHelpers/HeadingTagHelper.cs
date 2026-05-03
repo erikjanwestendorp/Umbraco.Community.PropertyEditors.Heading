@@ -1,5 +1,4 @@
-﻿using System.Text.Encodings.Web;
-using Microsoft.AspNetCore.Razor.TagHelpers;
+﻿using Microsoft.AspNetCore.Razor.TagHelpers;
 using Umbraco.Community.PropertyEditors.Heading.Models;
 
 namespace Umbraco.Community.PropertyEditors.Heading.TagHelpers;
@@ -22,26 +21,11 @@ public class HeadingTagHelper : TagHelper
         var tagName = Heading.Size.ToString().ToLower();
         output.TagName = tagName;
         output.TagMode = TagMode.StartTagAndEndTag;
-
-        var encodedText = HtmlEncoder.Default.Encode(Heading.Text ?? string.Empty);
-        var formattedText = encodedText;
-
-        if (Heading.Subscript && !Heading.Superscript)
-            formattedText = $"<sub>{formattedText}</sub>";
-
-        if (Heading.Superscript && !Heading.Subscript)
-            formattedText = $"<sup>{formattedText}</sup>";
-
-        if (Heading.Underline)
-            formattedText = $"<u>{formattedText}</u>";
-
-        if (Heading.Italic)
-            formattedText = $"<em>{formattedText}</em>";
-
-        if (Heading.Bold)
-            formattedText = $"<strong>{formattedText}</strong>";
-
-        output.Content.SetHtmlContent(formattedText);
+        // The text field contains inline HTML produced by the backoffice property editor
+        // (via document.execCommand formatting). Since this content is authored by authenticated
+        // Umbraco editors, it is rendered as HTML — the same approach used by Umbraco's own
+        // rich text editor property editor.
+        output.Content.SetHtmlContent(Heading.Text ?? string.Empty);
 
     
         if (!string.IsNullOrWhiteSpace(Class))

@@ -10,19 +10,4 @@ public class HtmlHeading
 
     [JsonPropertyName("size")]
     public HeadingSize Size { get; set; }
-
-    [JsonPropertyName("bold")]
-    public bool Bold { get; set; }
-
-    [JsonPropertyName("italic")]
-    public bool Italic { get; set; }
-
-    [JsonPropertyName("underline")]
-    public bool Underline { get; set; }
-
-    [JsonPropertyName("superscript")]
-    public bool Superscript { get; set; }
-
-    [JsonPropertyName("subscript")]
-    public bool Subscript { get; set; }
 }
