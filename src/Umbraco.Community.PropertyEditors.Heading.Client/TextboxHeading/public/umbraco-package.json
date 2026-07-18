@@ -1,7 +1,7 @@
 {
   "id": "Heading",
   "name": "Heading",
-  "version": "0.0.0",
+  "version": "18.0.0",
   "allowTelemetry": true,
   "extensions": [
     {
