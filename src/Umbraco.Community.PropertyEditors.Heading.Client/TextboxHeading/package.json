@@ -1,7 +1,7 @@
 {
   "name": "umbraco-community-property-editors-heading",
   "private": true,
-  "version": "0.0.0",
+  "version": "18.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -12,7 +12,7 @@
     "lit": "^3.3.0"
   },
   "devDependencies": {
-    "@umbraco-cms/backoffice": "^17.0.0",
+    "@umbraco-cms/backoffice": "^18.0.0",
     "typescript": "~5.8.3",
     "vite": "^6.3.5"
   }

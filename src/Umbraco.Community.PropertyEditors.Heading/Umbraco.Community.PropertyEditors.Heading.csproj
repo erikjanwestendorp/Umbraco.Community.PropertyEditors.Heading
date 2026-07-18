@@ -7,7 +7,7 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<Version>17.0.0</Version>
+		<Version>18.0.0</Version>
 		<PackageId>Umbraco.Community.PropertyEditors.Heading</PackageId>
 		<Product>Umbraco.Community.PropertyEditors.Heading</Product>
 		<Title>Umbraco.Community.PropertyEditors.Heading</Title>
@@ -30,7 +30,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Razor" Version="2.3.0" />
-		<PackageReference Include="Umbraco.Cms.Core" Version="[17.0.0, 18.0.0)" />
+		<PackageReference Include="Umbraco.Cms.Core" Version="[18.0.0, 19.0.0)" />
 	</ItemGroup>
 
 	<ItemGroup>
