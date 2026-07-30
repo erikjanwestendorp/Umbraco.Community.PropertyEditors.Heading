@@ -1,4 +1,4 @@
-const e = {
+const i = {
   type: "propertyEditorSchema",
   name: "Heading",
   alias: "Umbraco.Community.Heading",
@@ -11,16 +11,22 @@ const e = {
           label: "Headings",
           description: "Select the allowed headings",
           propertyEditorUiAlias: "Umb.Community.PropertyEditorUi.HeadingSize"
+        },
+        {
+          alias: "allowedFormattingOptions",
+          label: "Text formatting",
+          description: "Select the allowed text formatting options",
+          propertyEditorUiAlias: "Umb.Community.PropertyEditorUi.HeadingFormatting"
         }
       ]
     }
   }
-}, i = [
+}, t = [
   {
     type: "propertyEditorUi",
     alias: "Umb.Community.PropertyEditorUi.Heading",
     name: "Heading Property Editor UI",
-    element: () => import("./property-editor-ui-heading.element-w91sgKWz.js"),
+    element: () => import("./property-editor-ui-heading.element-DopfUUd4.js"),
     meta: {
       label: "Heading",
       icon: "icon-heading-1",
@@ -29,8 +35,8 @@ const e = {
       supportsReadOnly: !0
     }
   },
-  e
-], t = {
+  i
+], e = {
   type: "propertyEditorUi",
   alias: "Umb.Community.PropertyEditorUi.HeadingSize",
   name: "Heading Type Property Editor UI",
@@ -38,6 +44,16 @@ const e = {
   meta: {
     label: "Heading Size",
     icon: "icon-heading-2",
+    group: "Community"
+  }
+}, o = {
+  type: "propertyEditorUi",
+  alias: "Umb.Community.PropertyEditorUi.HeadingFormatting",
+  name: "Heading Formatting Property Editor UI",
+  element: () => import("./property-editor-ui-heading-formatting.element-CSWHxI8e.js"),
+  meta: {
+    label: "Heading Formatting",
+    icon: "icon-bold",
     group: "Community"
   }
 }, a = {
@@ -48,12 +64,13 @@ const e = {
   meta: {
     alias: "umbHeadingValue"
   }
-}, o = [
-  ...i,
-  t,
+}, n = [
+  ...t,
+  e,
+  o,
   a
 ];
 export {
-  o as manifests
+  n as manifests
 };
 //# sourceMappingURL=umbraco-community-property-editors-heading.js.map

@@ -14,6 +14,12 @@ export const manifest: ManifestPropertyEditorSchema = {
 					description: 'Select the allowed headings',
 					propertyEditorUiAlias: 'Umb.Community.PropertyEditorUi.HeadingSize',
 				},
+				{
+					alias: 'allowedFormattingOptions',
+					label: 'Text formatting',
+					description: 'Select the allowed text formatting options',
+					propertyEditorUiAlias: 'Umb.Community.PropertyEditorUi.HeadingFormatting',
+				},
 			],
 		},
 	},

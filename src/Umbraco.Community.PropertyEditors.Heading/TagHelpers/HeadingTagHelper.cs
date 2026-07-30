@@ -21,7 +21,11 @@ public class HeadingTagHelper : TagHelper
         var tagName = Heading.Size.ToString().ToLower();
         output.TagName = tagName;
         output.TagMode = TagMode.StartTagAndEndTag;
-        output.Content.SetContent(Heading.Text);
+        // The text field contains inline HTML produced by the backoffice property editor
+        // (via document.execCommand formatting). Since this content is authored by authenticated
+        // Umbraco editors, it is rendered as HTML — the same approach used by Umbraco's own
+        // rich text editor property editor.
+        output.Content.SetHtmlContent(Heading.Text ?? string.Empty);
 
     
         if (!string.IsNullOrWhiteSpace(Class))
